@@ -188,7 +188,7 @@ You can find all available recipe step options here: https://tidymodels.github.i
 ```{r weather_recipe}
 weather_recipe <- 
   # Defining predicted and predictor variables
-recipe(strength_gtx ~ .,
+recipe(strength_gtex ~ .,
        data = weather_train
        ) %>% 
     # Removing year and site  
@@ -346,7 +346,7 @@ best_rmse
 
 ```{r}
 # Based on greatest R2
-best_r2 <- enet_grid_result() %>%
+best_r2 <- enet_grid_result %>%
   select_best(metric = "rsq")
 
 best_r2
